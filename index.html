@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Japanese Quiz Game</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div id="menu-screen" class="screen">
+
+        <h1>Japanese Quiz Game</h1>
+
+        <p>
+
+            Final Score:
+
+            <span id="last-score">0</span>
+
+        </p>
+
+        <p>
+
+            High Score:
+            <span id="high-score">0</span>
+            
+        </p>
+
+        <button onclick="startGame()">Start Game</button>
+
+        <h3>Difficulty</h3>
+
+        <select id="difficulty">
+            <option value="easy">Easy</option>
+            <option value="normal" selected>Normal</option>
+            <option value="hard">Hard</option>
+        </select>
+
+    </div>
+
+    <div id="game-screen" class="screen hidden">
+
+        <div class="game-box">
+
+            <h1>Japanese Quiz Game</h1>
+
+            <h2 id="timer">time: 10</h2>
+
+            <h3 id="progress">Question 1 / 10</h3>
+            <h3 id="message"></h3>
+
+            <h1 id="question">?</h1>
+
+            <div class="buttons">
+
+                <button id="btn1"
+
+                    onclick="checkAnswer(this.innerHTML)">
+
+                </button>
+
+                <button id="btn2"
+
+                    onclick="checkAnswer(this.innerHTML)">
+
+                </button>
+
+                <button id="btn3"
+
+                    onclick="checkAnswer(this.innerHTML)">
+
+                </button>
+
+                <button id="btn4"
+
+                    onclick="checkAnswer(this.innerHTML)">
+
+                </button>
+
+            </div>
+
+            <h2 id="score">คะแนน: 0</h2>
+
+        </div>
+
+    </div>
+
+    <div id="gameover-screen" class="screen hidden">
+
+        <h1>Game Over</h1>
+
+        <h2>Your Score</h2>
+
+        <h1 id="final-score">0</h1>
+
+        <button onclick="startGame()">
+            Play Again
+        </button>
+
+        <button onclick="goMenu()">
+
+            戻る
+
+        </button>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
