@@ -18,7 +18,13 @@
 
     <div id="menu-screen" class="screen">
 
+        <div class="menu-box">
+
+
         <h1>Japanese Quiz Game</h1>
+
+        <h1>JLPT Practice Test</h1>
+        <p class="subtitle">Kanji ・Vorabulary・Grammar</p>
 
         <p>
 
@@ -40,10 +46,21 @@
         <h3>Difficulty</h3>
 
         <select id="difficulty">
-            <option value="easy">Easy</option>
-            <option value="normal" selected>Normal</option>
-            <option value="hard">Hard</option>
+            <option value="n5">N5</option>
+            <option value="n4">N4</option>
+            <option value="n3">N3</option>
+            <option value="n2">N2</option>
+            <option value="n1">N1</option>
         </select>
+
+        <h3>Category</h3>
+        <select id="category">
+            <option value="kanji">Kanji</option>
+            <option value="vocabulary">Vocabulary</option>
+            <option value="grammar">Grammar</option>
+        </select>
+
+        </div>
 
     </div>
 
@@ -96,11 +113,25 @@
 
     <div id="gameover-screen" class="screen hidden">
 
+        <div class="game-box">
+
         <h1>Game Over</h1>
 
         <h2>Your Score</h2>
 
         <h1 id="final-score">0</h1>
+
+        <h2 id="result"></h2>
+
+        <h3 id="percent"></h3>
+
+    <div class="progress">
+        <div id="progressBar"></div>
+    </div>
+
+    <h3 id="level"></h3>
+
+    <h3 id="bestScore"></h3>
 
         <button onclick="startGame()">
             Play Again
@@ -112,8 +143,11 @@
 
         </button>
 
+        </div>
+
     </div>
 
+    
     <script src="script.js"></script>
 
 </body>
