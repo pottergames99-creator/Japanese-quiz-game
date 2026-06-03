@@ -441,6 +441,8 @@ let category = "kanji";
 let timeLeft = 10;
 let timer;
 
+let wrongAnswers = [];
+
 
 const menuScreen =
 document.getElementById("menu-screen");
@@ -451,11 +453,17 @@ document.getElementById("game-screen");
 const gameoverScreen =
 document.getElementById("gameover-screen");
 
+let selectedLevel = "n5"
+
 function startGame(){
 
     questionCount = 0;
     score = 0;
 
+    wrongAnswers = [];
+    
+    selectedLevel =
+    document.getElementById("difficulty").value;
     difficulty =
     document.getElementById("difficulty").value;
     category =
@@ -691,7 +699,7 @@ function checkAnswer(choice){
     correctAnswer = currentWord.hiragana;
     }
 
-if(choice === correctAnswer){
+    if(choice === correctAnswer){
 
         score ++;
 
@@ -699,6 +707,12 @@ if(choice === correctAnswer){
         msg.className = "correct";
 
     } else {
+
+        wrongAnswers.push({
+            question: document.getElementById("question").innerHTML,
+            yourAnswer: choice,
+            correctAnswer: correctAnswer
+        });
 
         msg.innerHTML = "😆 Wrong!";
         msg.className = "wrong";
@@ -829,6 +843,9 @@ function endGame(){
     gameScreen.classList.add("hidden");
     gameoverScreen.classList.remove("hidden");
 
+    document.getElementById("level")
+    .innerHTML = selectedLevel.toUpperCase();
+
     document.getElementById("final-score")
     .innerHTML = score;
 
@@ -864,6 +881,28 @@ function endGame(){
             score
         );
     }
+
+    let wrongList = document.getElementById("wrong-list");
+
+    if (wrongAnswers.length === 0){
+
+        wrongList.innerHTML =
+        "<p style=`color:ligthgreen`>Perfect! No mistakes 👏</p>";
+
+    }else {
+        wrongList.innerHTML = "";
+
+    wrongAnswers.forEach(item => {
+
+        wrongList.innerHTML += `
+        <div style="margin: 10px 0;padding:10px;border:1px solid #ccc;border-radius:px8;">
+        <b>Question:</b> ${item.question}<br>
+        <b>Your Answer:</b> ${item.yourAnswer}<br>
+        <b>Correct:</b> ${item.correctAnswer}
+        </div>
+        `;
+    });
+   }
 }
 
 function goMenu(){
@@ -887,8 +926,9 @@ document.getElementById("high-score")
 .innerHTML =
 localStorage.getItem("highScore") || 0;
 
+console.log(difficulty);
 document.getElementById("level")
-.innerHTML = difficulty.toUpperCase();
+.innerHTML = selectedLevel.toUpperCase();
 
 localStorage.setItem(
     "bestScore",
