@@ -221,3 +221,12 @@ body{
     margin-bottom: 10px;
     border-radius: 10px;
 }
+
+.leader-row{
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}

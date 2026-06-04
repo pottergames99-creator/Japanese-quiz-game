@@ -34,6 +34,11 @@
 
         </p>
 
+        <input 
+        id="username"
+        placeholder="Enter Name"
+        />
+
         <p>
 
             High Score:
@@ -41,7 +46,12 @@
             
         </p>
 
-        <button onclick="startGame()">Start Game</button>
+
+        <button onclick="login()">Start Game</button>
+
+        <button onclick="showLeaderboard()">
+            🏆 Leaderboard
+        </button>
 
         <h3>Difficulty</h3>
 
@@ -60,6 +70,13 @@
             <option value="grammar">Grammar</option>
         </select>
 
+        <h2 id="rank"></h2>
+
+        <button onclick="startTimeAttack()">
+            ⏳Time Attack Mode
+        </button>
+
+
         </div>
 
     </div>
@@ -70,10 +87,11 @@
 
             <h1>Japanese Quiz Game</h1>
 
-            <h2 id="timer">time: 10</h2>
+            <h2 id="timer">⏳ 60</h2>
 
             <h3 id="progress">Question 1 / 10</h3>
             <h3 id="message"></h3>
+
 
             <h1 id="question">?</h1>
 
@@ -105,7 +123,7 @@
 
             </div>
 
-            <h2 id="score">คะแนน: 0</h2>
+            <h2 id="score">Score: 0</h2>
 
         </div>
 
@@ -145,6 +163,26 @@
             戻る
 
         </button>
+
+        </div>
+
+
+        
+    </div>
+
+    <div id="leaderboardModal" class="hidden">
+
+        <div class="leaderboard-box">
+
+            <h2>🏆 TOP 10 SCORE</h2>
+
+            <div id="leaderboardList">
+                Loadding...
+            </div>
+
+            <button onclick="closeLeaderboard()">
+                Close
+            </button>
 
         </div>
 
