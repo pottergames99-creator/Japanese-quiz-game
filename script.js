@@ -563,610 +563,6 @@ const n1Words = [
     { kanji:"吟味", hiragana:"ぎんみ" }
 ];
 
-const vocabularyN5 = [
-    { kanji:"先生", hiragana:"せんせい" },
-    { kanji:"学生", hiragana:"がくせい" },
-    { kanji:"学校", hiragana:"がっこう" },
-    { kanji:"教室", hiragana:"きょうしつ" },
-    { kanji:"友達", hiragana:"ともだち" },
-
-    { kanji:"会社", hiragana:"かいしゃ" },
-    { kanji:"社員", hiragana:"しゃいん" },
-    { kanji:"店員", hiragana:"てんいん" },
-    { kanji:"医者", hiragana:"いしゃ" },
-    { kanji:"看護師", hiragana:"かんごし" },
-
-    { kanji:"家族", hiragana:"かぞく" },
-    { kanji:"父", hiragana:"ちち" },
-    { kanji:"母", hiragana:"はは" },
-    { kanji:"兄", hiragana:"あに" },
-    { kanji:"姉", hiragana:"あね" },
-
-    { kanji:"弟", hiragana:"おとうと" },
-    { kanji:"妹", hiragana:"いもうと" },
-    { kanji:"子供", hiragana:"こども" },
-    { kanji:"男", hiragana:"おとこ" },
-    { kanji:"女", hiragana:"おんな" },
-
-    { kanji:"犬", hiragana:"いぬ" },
-    { kanji:"猫", hiragana:"ねこ" },
-    { kanji:"鳥", hiragana:"とり" },
-    { kanji:"魚", hiragana:"さかな" },
-    { kanji:"牛", hiragana:"うし" },
-
-    { kanji:"馬", hiragana:"うま" },
-    { kanji:"食べ物", hiragana:"たべもの" },
-    { kanji:"飲み物", hiragana:"のみもの" },
-    { kanji:"ご飯", hiragana:"ごはん" },
-    { kanji:"お茶", hiragana:"おちゃ" },
-
-    { kanji:"水", hiragana:"みず" },
-    { kanji:"肉", hiragana:"にく" },
-    { kanji:"野菜", hiragana:"やさい" },
-    { kanji:"果物", hiragana:"くだもの" },
-    { kanji:"電車", hiragana:"でんしゃ" },
-
-    { kanji:"自転車", hiragana:"じてんしゃ" },
-    { kanji:"飛行機", hiragana:"ひこうき" },
-    { kanji:"駅", hiragana:"えき" },
-    { kanji:"空港", hiragana:"くうこう" },
-    { kanji:"道", hiragana:"みち" },
-
-    { kanji:"家", hiragana:"いえ" },
-    { kanji:"部屋", hiragana:"へや" },
-    { kanji:"机", hiragana:"つくえ" },
-    { kanji:"椅子", hiragana:"いす" },
-    { kanji:"窓", hiragana:"まど" },
-
-    { kanji:"時計", hiragana:"とけい" },
-    { kanji:"電話", hiragana:"でんわ" },
-    { kanji:"本", hiragana:"ほん" },
-    { kanji:"新聞", hiragana:"しんぶん" },
-    { kanji:"雑誌", hiragana:"ざっし" },
-
-    { kanji:"映画", hiragana:"えいが" },
-    { kanji:"音楽", hiragana:"おんがく" },
-    { kanji:"写真", hiragana:"しゃしん" },
-    { kanji:"旅行", hiragana:"りょこう" },
-    { kanji:"散歩", hiragana:"さんぽ" },
-
-    { kanji:"勉強", hiragana:"べんきょう" },
-    { kanji:"試験", hiragana:"しけん" },
-    { kanji:"質問", hiragana:"しつもん" },
-    { kanji:"答え", hiragana:"こたえ" },
-    { kanji:"練習", hiragana:"れんしゅう" },
-
-    { kanji:"仕事", hiragana:"しごと" },
-    { kanji:"休み", hiragana:"やすみ" },
-    { kanji:"会議", hiragana:"かいぎ" },
-    { kanji:"用事", hiragana:"ようじ" },
-    { kanji:"約束", hiragana:"やくそく" },
-
-    { kanji:"買い物", hiragana:"かいもの" },
-    { kanji:"店", hiragana:"みせ" },
-    { kanji:"銀行", hiragana:"ぎんこう" },
-    { kanji:"郵便局", hiragana:"ゆうびんきょく" },
-    { kanji:"病院", hiragana:"びょういん" },
-
-    { kanji:"公園", hiragana:"こうえん" },
-    { kanji:"図書館", hiragana:"としょかん" },
-    { kanji:"美術館", hiragana:"びじゅつかん" },
-    { kanji:"体育館", hiragana:"たいいくかん" },
-    { kanji:"教会", hiragana:"きょうかい" },
-
-    { kanji:"天気", hiragana:"てんき" },
-    { kanji:"晴れ", hiragana:"はれ" },
-    { kanji:"曇り", hiragana:"くもり" },
-    { kanji:"風", hiragana:"かぜ" },
-    { kanji:"台風", hiragana:"たいふう" },
-
-    { kanji:"春", hiragana:"はる" },
-    { kanji:"夏", hiragana:"なつ" },
-    { kanji:"秋", hiragana:"あき" },
-    { kanji:"冬", hiragana:"ふゆ" },
-    { kanji:"季節", hiragana:"きせつ" },
-
-    { kanji:"今日", hiragana:"きょう" },
-    { kanji:"昨日", hiragana:"きのう" },
-    { kanji:"明日", hiragana:"あした" },
-    { kanji:"朝", hiragana:"あさ" },
-    { kanji:"昼", hiragana:"ひる" },
-
-    { kanji:"夜", hiragana:"よる" },
-    { kanji:"時間", hiragana:"じかん" },
-    { kanji:"今年", hiragana:"ことし" },
-    { kanji:"去年", hiragana:"きょねん" },
-    { kanji:"来年", hiragana:"らいねん" },
-
-    { kanji:"日本語", hiragana:"にほんご" },
-    { kanji:"英語", hiragana:"えいご" },
-    { kanji:"漢字", hiragana:"かんじ" },
-    { kanji:"言葉", hiragana:"ことば" },
-    { kanji:"意味", hiragana:"いみ" }
-];
-
-const vocabularyN4 = [
-    { kanji:"経験", hiragana:"けいけん" },
-    { kanji:"習慣", hiragana:"しゅうかん" },
-    { kanji:"準備", hiragana:"じゅんび" },
-    { kanji:"予定", hiragana:"よてい" },
-    { kanji:"予約", hiragana:"よやく" },
-
-    { kanji:"案内", hiragana:"あんない" },
-    { kanji:"説明", hiragana:"せつめい" },
-    { kanji:"理由", hiragana:"りゆう" },
-    { kanji:"原因", hiragana:"げんいん" },
-    { kanji:"結果", hiragana:"けっか" },
-
-    { kanji:"意見", hiragana:"いけん" },
-    { kanji:"感想", hiragana:"かんそう" },
-    { kanji:"約束", hiragana:"やくそく" },
-    { kanji:"連絡", hiragana:"れんらく" },
-    { kanji:"相談", hiragana:"そうだん" },
-
-    { kanji:"注意", hiragana:"ちゅうい" },
-    { kanji:"用意", hiragana:"ようい" },
-    { kanji:"成功", hiragana:"せいこう" },
-    { kanji:"失敗", hiragana:"しっぱい" },
-    { kanji:"参加", hiragana:"さんか" },
-
-    { kanji:"発表", hiragana:"はっぴょう" },
-    { kanji:"会議", hiragana:"かいぎ" },
-    { kanji:"出張", hiragana:"しゅっちょう" },
-    { kanji:"残業", hiragana:"ざんぎょう" },
-    { kanji:"給料", hiragana:"きゅうりょう" },
-
-    { kanji:"運転", hiragana:"うんてん" },
-    { kanji:"免許", hiragana:"めんきょ" },
-    { kanji:"道路", hiragana:"どうろ" },
-    { kanji:"事故", hiragana:"じこ" },
-    { kanji:"信号", hiragana:"しんごう" },
-
-    { kanji:"建物", hiragana:"たてもの" },
-    { kanji:"受付", hiragana:"うけつけ" },
-    { kanji:"玄関", hiragana:"げんかん" },
-    { kanji:"階段", hiragana:"かいだん" },
-    { kanji:"屋上", hiragana:"おくじょう" },
-
-    { kanji:"冷蔵庫", hiragana:"れいぞうこ" },
-    { kanji:"洗濯機", hiragana:"せんたくき" },
-    { kanji:"掃除機", hiragana:"そうじき" },
-    { kanji:"台所", hiragana:"だいどころ" },
-    { kanji:"材料", hiragana:"ざいりょう" },
-
-    { kanji:"味", hiragana:"あじ" },
-    { kanji:"甘い", hiragana:"あまい" },
-    { kanji:"辛い", hiragana:"からい" },
-    { kanji:"苦い", hiragana:"にがい" },
-    { kanji:"塩", hiragana:"しお" },
-
-    { kanji:"砂糖", hiragana:"さとう" },
-    { kanji:"季節", hiragana:"きせつ" },
-    { kanji:"気温", hiragana:"きおん" },
-    { kanji:"天気予報", hiragana:"てんきよほう" },
-    { kanji:"台風", hiragana:"たいふう" },
-
-    { kanji:"文化", hiragana:"ぶんか" },
-    { kanji:"歴史", hiragana:"れきし" },
-    { kanji:"世界", hiragana:"せかい" },
-    { kanji:"社会", hiragana:"しゃかい" },
-    { kanji:"未来", hiragana:"みらい" },
-
-    { kanji:"人口", hiragana:"じんこう" },
-    { kanji:"地域", hiragana:"ちいき" },
-    { kanji:"国際", hiragana:"こくさい" },
-    { kanji:"環境", hiragana:"かんきょう" },
-    { kanji:"資源", hiragana:"しげん" },
-
-    { kanji:"健康", hiragana:"けんこう" },
-    { kanji:"病気", hiragana:"びょうき" },
-    { kanji:"薬", hiragana:"くすり" },
-    { kanji:"看護師", hiragana:"かんごし" },
-    { kanji:"治療", hiragana:"ちりょう" },
-
-    { kanji:"運動", hiragana:"うんどう" },
-    { kanji:"散歩", hiragana:"さんぽ" },
-    { kanji:"水泳", hiragana:"すいえい" },
-    { kanji:"野球", hiragana:"やきゅう" },
-    { kanji:"試合", hiragana:"しあい" },
-
-    { kanji:"趣味", hiragana:"しゅみ" },
-    { kanji:"写真", hiragana:"しゃしん" },
-    { kanji:"音楽", hiragana:"おんがく" },
-    { kanji:"映画", hiragana:"えいが" },
-    { kanji:"旅行", hiragana:"りょこう" },
-
-    { kanji:"宿泊", hiragana:"しゅくはく" },
-    { kanji:"温泉", hiragana:"おんせん" },
-    { kanji:"観光", hiragana:"かんこう" },
-    { kanji:"土産", hiragana:"みやげ" },
-    { kanji:"案内所", hiragana:"あんないじょ" },
-
-    { kanji:"必要", hiragana:"ひつよう" },
-    { kanji:"便利", hiragana:"べんり" },
-    { kanji:"不便", hiragana:"ふべん" },
-    { kanji:"特別", hiragana:"とくべつ" },
-    { kanji:"自由", hiragana:"じゆう" },
-
-    { kanji:"残念", hiragana:"ざんねん" },
-    { kanji:"有名", hiragana:"ゆうめい" },
-    { kanji:"親切", hiragana:"しんせつ" },
-    { kanji:"真面目", hiragana:"まじめ" },
-    { kanji:"熱心", hiragana:"ねっしん" },
-
-    { kanji:"危険", hiragana:"きけん" },
-    { kanji:"安全", hiragana:"あんぜん" },
-    { kanji:"静か", hiragana:"しずか" },
-    { kanji:"十分", hiragana:"じゅうぶん" },
-    { kanji:"普通", hiragana:"ふつう" },
-
-    { kanji:"選択", hiragana:"せんたく" },
-    { kanji:"決定", hiragana:"けってい" },
-    { kanji:"調査", hiragana:"ちょうさ" },
-    { kanji:"伝言", hiragana:"でんごん" },
-    { kanji:"変更", hiragana:"へんこう" }
-];
-
-const vocabularyN3 = [
-    { kanji:"影響", hiragana:"えいきょう" },
-    { kanji:"状況", hiragana:"じょうきょう" },
-    { kanji:"経済", hiragana:"けいざい" },
-    { kanji:"社会", hiragana:"しゃかい" },
-    { kanji:"環境", hiragana:"かんきょう" },
-
-    { kanji:"文化", hiragana:"ぶんか" },
-    { kanji:"政治", hiragana:"せいじ" },
-    { kanji:"技術", hiragana:"ぎじゅつ" },
-    { kanji:"情報", hiragana:"じょうほう" },
-    { kanji:"通信", hiragana:"つうしん" },
-
-    { kanji:"発展", hiragana:"はってん" },
-    { kanji:"変化", hiragana:"へんか" },
-    { kanji:"傾向", hiragana:"けいこう" },
-    { kanji:"対策", hiragana:"たいさく" },
-    { kanji:"解決", hiragana:"かいけつ" },
-
-    { kanji:"課題", hiragana:"かだい" },
-    { kanji:"責任", hiragana:"せきにん" },
-    { kanji:"権利", hiragana:"けんり" },
-    { kanji:"義務", hiragana:"ぎむ" },
-    { kanji:"関係", hiragana:"かんけい" },
-
-    { kanji:"評価", hiragana:"ひょうか" },
-    { kanji:"判断", hiragana:"はんだん" },
-    { kanji:"分析", hiragana:"ぶんせき" },
-    { kanji:"比較", hiragana:"ひかく" },
-    { kanji:"特徴", hiragana:"とくちょう" },
-
-    { kanji:"価値", hiragana:"かち" },
-    { kanji:"目的", hiragana:"もくてき" },
-    { kanji:"手段", hiragana:"しゅだん" },
-    { kanji:"方針", hiragana:"ほうしん" },
-    { kanji:"計画", hiragana:"けいかく" },
-
-    { kanji:"実行", hiragana:"じっこう" },
-    { kanji:"達成", hiragana:"たっせい" },
-    { kanji:"成果", hiragana:"せいか" },
-    { kanji:"進歩", hiragana:"しんぽ" },
-    { kanji:"協力", hiragana:"きょうりょく" },
-
-    { kanji:"競争", hiragana:"きょうそう" },
-    { kanji:"需要", hiragana:"じゅよう" },
-    { kanji:"供給", hiragana:"きょうきゅう" },
-    { kanji:"収入", hiragana:"しゅうにゅう" },
-    { kanji:"支出", hiragana:"ししゅつ" },
-
-    { kanji:"利益", hiragana:"りえき" },
-    { kanji:"損失", hiragana:"そんしつ" },
-    { kanji:"商品", hiragana:"しょうひん" },
-    { kanji:"市場", hiragana:"しじょう" },
-    { kanji:"価格", hiragana:"かかく" },
-
-    { kanji:"消費", hiragana:"しょうひ" },
-    { kanji:"交通", hiragana:"こうつう" },
-    { kanji:"設備", hiragana:"せつび" },
-    { kanji:"資源", hiragana:"しげん" },
-    { kanji:"契約", hiragana:"けいやく" },
-
-    { kanji:"報告", hiragana:"ほうこく" },
-    { kanji:"調査", hiragana:"ちょうさ" },
-    { kanji:"統計", hiragana:"とうけい" },
-    { kanji:"証明", hiragana:"しょうめい" },
-    { kanji:"確認", hiragana:"かくにん" },
-
-    { kanji:"予測", hiragana:"よそく" },
-    { kanji:"期待", hiragana:"きたい" },
-    { kanji:"信頼", hiragana:"しんらい" },
-    { kanji:"維持", hiragana:"いじ" },
-    { kanji:"拡大", hiragana:"かくだい" },
-
-    { kanji:"縮小", hiragana:"しゅくしょう" },
-    { kanji:"現象", hiragana:"げんしょう" },
-    { kanji:"基準", hiragana:"きじゅん" },
-    { kanji:"条件", hiragana:"じょうけん" },
-    { kanji:"内容", hiragana:"ないよう" },
-
-    { kanji:"形式", hiragana:"けいしき" },
-    { kanji:"意見", hiragana:"いけん" },
-    { kanji:"提案", hiragana:"ていあん" },
-    { kanji:"発表", hiragana:"はっぴょう" },
-    { kanji:"経験", hiragana:"けいけん" },
-
-    { kanji:"成功", hiragana:"せいこう" },
-    { kanji:"失敗", hiragana:"しっぱい" },
-    { kanji:"能力", hiragana:"のうりょく" },
-    { kanji:"知識", hiragana:"ちしき" },
-    { kanji:"理解", hiragana:"りかい" },
-
-    { kanji:"活動", hiragana:"かつどう" },
-    { kanji:"地域", hiragana:"ちいき" },
-    { kanji:"組織", hiragana:"そしき" },
-    { kanji:"制度", hiragana:"せいど" },
-    { kanji:"企業", hiragana:"きぎょう" },
-
-    { kanji:"管理", hiragana:"かんり" },
-    { kanji:"開発", hiragana:"かいはつ" },
-    { kanji:"研究", hiragana:"けんきゅう" },
-    { kanji:"教育", hiragana:"きょういく" },
-    { kanji:"国際", hiragana:"こくさい" },
-
-    { kanji:"法律", hiragana:"ほうりつ" },
-    { kanji:"戦略", hiragana:"せんりゃく" },
-    { kanji:"目標", hiragana:"もくひょう" },
-    { kanji:"原因", hiragana:"げんいん" },
-    { kanji:"結果", hiragana:"けっか" },
-
-    { kanji:"連絡", hiragana:"れんらく" },
-    { kanji:"相談", hiragana:"そうだん" },
-    { kanji:"改善", hiragana:"かいぜん" },
-    { kanji:"運営", hiragana:"うんえい" },
-    { kanji:"運用", hiragana:"うんよう" },
-];
-
-const vocabularyN2 = [
-    { kanji:"経営", hiragana:"けいえい" },
-    { kanji:"投資", hiragana:"とうし" },
-    { kanji:"景気", hiragana:"けいき" },
-    { kanji:"雇用", hiragana:"こよう" },
-    { kanji:"失業", hiragana:"しつぎょう" },
-
-    { kanji:"金融", hiragana:"きんゆう" },
-    { kanji:"税金", hiragana:"ぜいきん" },
-    { kanji:"保険", hiragana:"ほけん" },
-    { kanji:"予算", hiragana:"よさん" },
-    { kanji:"資金", hiragana:"しきん" },
-
-    { kanji:"資産", hiragana:"しさん" },
-    { kanji:"利益", hiragana:"りえき" },
-    { kanji:"損失", hiragana:"そんしつ" },
-    { kanji:"消費", hiragana:"しょうひ" },
-    { kanji:"需要", hiragana:"じゅよう" },
-
-    { kanji:"供給", hiragana:"きょうきゅう" },
-    { kanji:"市場", hiragana:"しじょう" },
-    { kanji:"価格", hiragana:"かかく" },
-    { kanji:"企業", hiragana:"きぎょう" },
-    { kanji:"産業", hiragana:"さんぎょう" },
-
-    { kanji:"政策", hiragana:"せいさく" },
-    { kanji:"議論", hiragana:"ぎろん" },
-    { kanji:"世論", hiragana:"よろん" },
-    { kanji:"法律", hiragana:"ほうりつ" },
-    { kanji:"制度", hiragana:"せいど" },
-
-    { kanji:"組織", hiragana:"そしき" },
-    { kanji:"責任", hiragana:"せきにん" },
-    { kanji:"権利", hiragana:"けんり" },
-    { kanji:"義務", hiragana:"ぎむ" },
-    { kanji:"主張", hiragana:"しゅちょう" },
-
-    { kanji:"根拠", hiragana:"こんきょ" },
-    { kanji:"証拠", hiragana:"しょうこ" },
-    { kanji:"判断", hiragana:"はんだん" },
-    { kanji:"分析", hiragana:"ぶんせき" },
-    { kanji:"比較", hiragana:"ひかく" },
-
-    { kanji:"検討", hiragana:"けんとう" },
-    { kanji:"評価", hiragana:"ひょうか" },
-    { kanji:"観察", hiragana:"かんさつ" },
-    { kanji:"調査", hiragana:"ちょうさ" },
-    { kanji:"統計", hiragana:"とうけい" },
-
-    { kanji:"実績", hiragana:"じっせき" },
-    { kanji:"成果", hiragana:"せいか" },
-    { kanji:"方針", hiragana:"ほうしん" },
-    { kanji:"戦略", hiragana:"せんりゃく" },
-    { kanji:"目標", hiragana:"もくひょう" },
-
-    { kanji:"契約", hiragana:"けいやく" },
-    { kanji:"交渉", hiragana:"こうしょう" },
-    { kanji:"協力", hiragana:"きょうりょく" },
-    { kanji:"競争", hiragana:"きょうそう" },
-    { kanji:"開発", hiragana:"かいはつ" },
-
-    { kanji:"技術", hiragana:"ぎじゅつ" },
-    { kanji:"研究", hiragana:"けんきゅう" },
-    { kanji:"情報", hiragana:"じょうほう" },
-    { kanji:"通信", hiragana:"つうしん" },
-    { kanji:"管理", hiragana:"かんり" },
-
-    { kanji:"運営", hiragana:"うんえい" },
-    { kanji:"運用", hiragana:"うんよう" },
-    { kanji:"設備", hiragana:"せつび" },
-    { kanji:"環境", hiragana:"かんきょう" },
-    { kanji:"資源", hiragana:"しげん" },
-
-    { kanji:"国際", hiragana:"こくさい" },
-    { kanji:"外交", hiragana:"がいこう" },
-    { kanji:"貿易", hiragana:"ぼうえき" },
-    { kanji:"教育", hiragana:"きょういく" },
-    { kanji:"文化", hiragana:"ぶんか" },
-
-    { kanji:"歴史", hiragana:"れきし" },
-    { kanji:"伝統", hiragana:"でんとう" },
-    { kanji:"芸術", hiragana:"げいじゅつ" },
-    { kanji:"宗教", hiragana:"しゅうきょう" },
-    { kanji:"地域", hiragana:"ちいき" },
-
-    { kanji:"社会", hiragana:"しゃかい" },
-    { kanji:"世代", hiragana:"せだい" },
-    { kanji:"人口", hiragana:"じんこう" },
-    { kanji:"現象", hiragana:"げんしょう" },
-    { kanji:"原因", hiragana:"げんいん" },
-
-    { kanji:"結果", hiragana:"けっか" },
-    { kanji:"影響", hiragana:"えいきょう" },
-    { kanji:"対策", hiragana:"たいさく" },
-    { kanji:"防止", hiragana:"ぼうし" },
-    { kanji:"解決", hiragana:"かいけつ" },
-
-    { kanji:"課題", hiragana:"かだい" },
-    { kanji:"資料", hiragana:"しりょう" },
-    { kanji:"報告", hiragana:"ほうこく" },
-    { kanji:"発表", hiragana:"はっぴょう" },
-    { kanji:"確認", hiragana:"かくにん" },
-
-    { kanji:"予測", hiragana:"よそく" },
-    { kanji:"期待", hiragana:"きたい" },
-    { kanji:"信頼", hiragana:"しんらい" },
-    { kanji:"維持", hiragana:"いじ" },
-    { kanji:"改善", hiragana:"かいぜん" },
-
-    { kanji:"改革", hiragana:"かいかく" },
-    { kanji:"拡大", hiragana:"かくだい" },
-    { kanji:"縮小", hiragana:"しゅくしょう" },
-    { kanji:"達成", hiragana:"たっせい" },
-    { kanji:"成功", hiragana:"せいこう" },
-
-    { kanji:"失敗", hiragana:"しっぱい" },
-    { kanji:"経験", hiragana:"けいけん" },
-    { kanji:"能力", hiragana:"のうりょく" },
-    { kanji:"知識", hiragana:"ちしき" },
-    { kanji:"理解", hiragana:"りかい" },
-];
-
-const vocabularyN1 = [
-    { kanji:"概念", hiragana:"がいねん" },
-    { kanji:"抽象", hiragana:"ちゅうしょう" },
-    { kanji:"理論", hiragana:"りろん" },
-    { kanji:"仮説", hiragana:"かせつ" },
-    { kanji:"検証", hiragana:"けんしょう" },
-
-    { kanji:"根拠", hiragana:"こんきょ" },
-    { kanji:"主張", hiragana:"しゅちょう" },
-    { kanji:"反論", hiragana:"はんろん" },
-    { kanji:"矛盾", hiragana:"むじゅん" },
-    { kanji:"妥当", hiragana:"だとう" },
-
-    { kanji:"慣習", hiragana:"かんしゅう" },
-    { kanji:"慣例", hiragana:"かんれい" },
-    { kanji:"風潮", hiragana:"ふうちょう" },
-    { kanji:"倫理", hiragana:"りんり" },
-    { kanji:"哲学", hiragana:"てつがく" },
-
-    { kanji:"心理", hiragana:"しんり" },
-    { kanji:"価値観", hiragana:"かちかん" },
-    { kanji:"先入観", hiragana:"せんにゅうかん" },
-    { kanji:"認識", hiragana:"にんしき" },
-    { kanji:"本質", hiragana:"ほんしつ" },
-
-    { kanji:"視点", hiragana:"してん" },
-    { kanji:"観点", hiragana:"かんてん" },
-    { kanji:"枠組み", hiragana:"わくぐみ" },
-    { kanji:"動向", hiragana:"どうこう" },
-    { kanji:"傾向", hiragana:"けいこう" },
-
-    { kanji:"実態", hiragana:"じったい" },
-    { kanji:"背景", hiragana:"はいけい" },
-    { kanji:"過程", hiragana:"かてい" },
-    { kanji:"展望", hiragana:"てんぼう" },
-    { kanji:"究極", hiragana:"きゅうきょく" },
-
-    { kanji:"顕著", hiragana:"けんちょ" },
-    { kanji:"潜在", hiragana:"せんざい" },
-    { kanji:"普遍", hiragana:"ふへん" },
-    { kanji:"革新", hiragana:"かくしん" },
-    { kanji:"秩序", hiragana:"ちつじょ" },
-
-    { kanji:"均衡", hiragana:"きんこう" },
-    { kanji:"意義", hiragana:"いぎ" },
-    { kanji:"要因", hiragana:"よういん" },
-    { kanji:"側面", hiragana:"そくめん" },
-    { kanji:"洞察", hiragana:"どうさつ" },
-
-    { kanji:"推測", hiragana:"すいそく" },
-    { kanji:"想定", hiragana:"そうてい" },
-    { kanji:"仮定", hiragana:"かてい" },
-    { kanji:"解釈", hiragana:"かいしゃく" },
-    { kanji:"認知", hiragana:"にんち" },
-
-    { kanji:"形成", hiragana:"けいせい" },
-    { kanji:"構築", hiragana:"こうちく" },
-    { kanji:"転換", hiragana:"てんかん" },
-    { kanji:"適応", hiragana:"てきおう" },
-    { kanji:"淘汰", hiragana:"とうた" },
-
-    { kanji:"抽出", hiragana:"ちゅうしゅつ" },
-    { kanji:"誘発", hiragana:"ゆうはつ" },
-    { kanji:"促進", hiragana:"そくしん" },
-    { kanji:"抑制", hiragana:"よくせい" },
-    { kanji:"拡張", hiragana:"かくちょう" },
-
-    { kanji:"縮減", hiragana:"しゅくげん" },
-    { kanji:"派生", hiragana:"はせい" },
-    { kanji:"連携", hiragana:"れんけい" },
-    { kanji:"依存", hiragana:"いぞん" },
-    { kanji:"自立", hiragana:"じりつ" },
-
-    { kanji:"共存", hiragana:"きょうぞん" },
-    { kanji:"対立", hiragana:"たいりつ" },
-    { kanji:"融合", hiragana:"ゆうごう" },
-    { kanji:"分離", hiragana:"ぶんり" },
-    { kanji:"統合", hiragana:"とうごう" },
-
-    { kanji:"包括", hiragana:"ほうかつ" },
-    { kanji:"排除", hiragana:"はいじょ" },
-    { kanji:"介入", hiragana:"かいにゅう" },
-    { kanji:"監督", hiragana:"かんとく" },
-    { kanji:"監視", hiragana:"かんし" },
-
-    { kanji:"統制", hiragana:"とうせい" },
-    { kanji:"規制", hiragana:"きせい" },
-    { kanji:"緩和", hiragana:"かんわ" },
-    { kanji:"是正", hiragana:"ぜせい" },
-    { kanji:"妥協", hiragana:"だきょう" },
-
-    { kanji:"譲歩", hiragana:"じょうほ" },
-    { kanji:"配慮", hiragana:"はいりょ" },
-    { kanji:"考慮", hiragana:"こうりょ" },
-    { kanji:"懸念", hiragana:"けねん" },
-    { kanji:"認可", hiragana:"にんか" },
-
-    { kanji:"承認", hiragana:"しょうにん" },
-    { kanji:"拒否", hiragana:"きょひ" },
-    { kanji:"容認", hiragana:"ようにん" },
-    { kanji:"履行", hiragana:"りこう" },
-    { kanji:"遂行", hiragana:"すいこう" },
-
-    { kanji:"達成", hiragana:"たっせい" },
-    { kanji:"挫折", hiragana:"ざせつ" },
-    { kanji:"克服", hiragana:"こくふく" },
-    { kanji:"維持", hiragana:"いじ" },
-    { kanji:"変遷", hiragana:"へんせん" },
-
-    { kanji:"推移", hiragana:"すいい" },
-    { kanji:"兆候", hiragana:"ちょうこう" },
-    { kanji:"動機", hiragana:"どうき" },
-    { kanji:"契機", hiragana:"けいき" },
-    { kanji:"根本", hiragana:"こんぽん" },
-
-    { kanji:"本来", hiragana:"ほんらい" },
-    { kanji:"実践", hiragana:"じっせん" },
-    { kanji:"検討", hiragana:"けんとう" },
-    { kanji:"吟味", hiragana:"ぎんみ" },
-    { kanji:"追及", hiragana:"ついきゅう" }
-];
-
 const grammarN5 = [
     { question:"私は毎日日本語___勉強します。", answer:"を" },
     { question:"学校___行きます。", answer:"へ" },
@@ -1781,6 +1177,11 @@ let category = "kanji";
 let timer;
 let timeLeft = 60;
 
+let selectedLevel = "n5"
+
+let gameMode = "normal";
+let playerName = "";
+
 let wrongAnswers = [];
 
 
@@ -1793,7 +1194,6 @@ document.getElementById("game-screen");
 const gameoverScreen =
 document.getElementById("gameover-screen");
 
-let selectedLevel = "n5"
 
 function startGame(){
 
@@ -1802,12 +1202,7 @@ function startGame(){
 
     wrongAnswers = [];
     
-    selectedLevel =
-    document.getElementById("difficulty").value;
-    difficulty =
-    document.getElementById("difficulty").value;
-    category =
-    document.getElementById("category").value;
+    difficulty = selectedLevel;
 
     if(gameMode === "time"){
 
@@ -2117,29 +1512,6 @@ function checkAnswer(choice){
     }
 }
 
-else if(category === "vocabulary"){
-
-        if(difficulty === "n5"){
-            words = vocabularyN5;
-        }
-
-        else if(difficulty === "n4"){
-            words = vocabularyN4;
-        }
-
-        else if(difficulty === "n3"){
-            words = vocabularyN3;
-        }
-
-        else if(difficulty === "n2"){
-            words = vocabularyN2;
-        }
-
-        else if(difficulty === "n1"){
-            words = vocabularyN1;
-        }
-    }
-
 else if(category === "grammar"){
         
         if(difficulty === "n5"){
@@ -2225,6 +1597,14 @@ function endGame(){
     document.getElementById("percent")
     .innerHTML =
     percent + "%";
+
+    if(gameMode === "time"){
+        document.getElementById("percent").remove();
+        document.getElementById("progress").remove();
+        document.getElementById("level").remove();
+        document.getElementById("progressBar").remove();
+        document.getElementById("result").remove();
+    }
 
     localStorage.setItem(
         "lastScore",
@@ -2331,6 +1711,12 @@ function endGame(){
         localStorage.getItem("playerName"),
         score
     );
+
+    console.log(
+        "SAVE SCORE",
+        localStorage.getItem("playerName"),
+        score
+    );
    }
 }
 
@@ -2372,19 +1758,10 @@ document.getElementById("bestScore")
 "Best Score: " +
 (localStorage.getItem("bestScore")) || 0;
 
-let playerName = "";
 
 function login(){
 
-    playerName = 
-    document.getElementById("username").value;
-
-    console.log("LOGIN NAME =", playerName)
-
-    if(playerName.trim() === "") {
-        alert("Please enter your name");
-        return;
-    }
+    playerName = "Guest";
 
     localStorage.setItem(
         "playerName",
@@ -2394,7 +1771,19 @@ function login(){
     startNormalGame();
 }
 
-let gameMode = "normal";
+function startGrammar(){
+
+    category = "grammar";
+
+    startGame();
+}
+
+function startKanji(){
+
+    category = "kanji";
+
+    startGame();
+}
 
 function startTimeAttack(){
 
@@ -2431,12 +1820,26 @@ function startNormalGame(){
 
 async function saveLeaderboard(name, score){
 
+    console.log(
+        "saveLeaderboard()",
+        name,
+        score
+    );
+
     document
     .getElementById("leaderboardModal")
     .classList
     .remove("hidden");
 
     const url = "https://script.google.com/macros/s/AKfycbwvZIuKC7kF_PXcxpoN0xiC3rCXA1T7OuNkE7W1ldijEzOtWZ95BvFLVXxgmZIs-1KP3w/exec";
+
+    await fetch(url,{
+        method : "POST",
+        body : JSON.stringify({
+            name : name,
+            score : score
+        })
+    });
 
     const response =
     await fetch(url);
@@ -2462,12 +1865,6 @@ async function saveLeaderboard(name, score){
 
 }
 
-function closeLeaderboard(){
-
-    document
-    .getElementById("leaderboardModal")
-    .classList.add("hidden");
-}
 
 async function showLeaderboard(){
 
@@ -2502,3 +1899,34 @@ async function showLeaderboard(){
       .innerHTML = html;
 }
 
+function openDifficultyModal(){
+    document
+        .getElementById("difficultyModal")
+        .classList.remove("hidden");
+}
+
+function closeDifficultyModal(){
+    document
+        .getElementById("difficultyModal")
+        .classList.add("hidden");
+}
+
+function setLevel(level){
+
+    selectedDifficulty = level;
+
+    document
+        .getElementById("selected-level")
+        .innerText =
+        level.toUpperCase();
+
+    closeDifficultyModal();
+}
+
+
+function closeLeaderboardModal(){
+
+    document
+        .getElementById("leaderboardModal")
+        .classList.add("hidden");
+}

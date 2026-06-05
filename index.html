@@ -8,7 +8,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Japanese Quiz Game</title>
+    <title>Japanese Level Check</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -21,9 +21,19 @@
         <div class="menu-box">
 
 
-        <h1>Japanese Quiz Game</h1>
+            <h3 class="cefr">
+                JLPT N5 > N1
+            </h3>
 
-        <h1>JLPT Practice Test</h1>
+            <h1 class="title">
+                Japanese Level Check
+            </h1>
+
+            <p>
+                Select a section to start
+            </p>
+
+
         <p class="subtitle">Kanji ・Vorabulary・Grammar</p>
 
         <p>
@@ -31,50 +41,59 @@
             Final Score:
 
             <span id="last-score">0</span>
-
+        
         </p>
-
-        <input 
-        id="username"
-        placeholder="Enter Name"
-        />
 
         <p>
+           Best Score:
 
-            High Score:
-            <span id="high-score">0</span>
-            
+           <span id="high-score">0</span>
+
         </p>
 
 
-        <button onclick="login()">Start Game</button>
+        <div class="menu-grid">
 
-        <button onclick="showLeaderboard()">
-            🏆 Leaderboard
-        </button>
+    <div class="menu-card blue" onclick="startKanji()">
+        <div class="icon">📖</div>
+        <h3>Kanji</h3>
+        <p>語彙・単語</p>
+    </div>
 
-        <h3>Difficulty</h3>
+    <div class="menu-card purple"
+        onclick="startGrammar()">
+        <div class="icon">✏️</div>
+        <h3>Grammar</h3>
+        <p>文法</p>
 
-        <select id="difficulty">
-            <option value="n5">N5</option>
-            <option value="n4">N4</option>
-            <option value="n3">N3</option>
-            <option value="n2">N2</option>
-            <option value="n1">N1</option>
-        </select>
+    </div>
 
-        <h3>Category</h3>
-        <select id="category">
-            <option value="kanji">Kanji</option>
-            <option value="vocabulary">Vocabulary</option>
-            <option value="grammar">Grammar</option>
-        </select>
+    <div class="menu-card green"
+     onclick="openDifficultyModal()">
 
-        <h2 id="rank"></h2>
+    <div class="icon">📄</div>
 
-        <button onclick="startTimeAttack()">
-            ⏳Time Attack Mode
-        </button>
+    <h3>JLPT Level</h3>
+
+    <p id="selected-level">N5</p>
+
+</div>
+
+    <div class="menu-card cyan"
+         onclick="showLeaderboard()">
+        <div class="icon">🏆</div>
+        <h3>Leaderboard</h3>
+        <p>Top Players</p>
+    </div>
+
+    <div class="menu-card orange"
+         onclick="startTimeAttack()">
+        <div class="icon">😊</div>
+        <h3>Time Attack</h3>
+        <p>N5 → N1</p>
+    </div>
+
+</div>
 
 
         </div>
@@ -85,7 +104,17 @@
 
         <div class="game-box">
 
-            <h1>Japanese Quiz Game</h1>
+            <h3 class="cefr">
+                JLPT N5 > N1
+            </h3>
+
+            <h1 class="title">
+                Japanese Level Check
+            </h1>
+
+            <p>
+                Select a section to start
+            </p>
 
             <h2 id="timer">⏳ 60</h2>
 
@@ -149,7 +178,7 @@
 
     <h3 id="level"></h3>
 
-    <h3 id="bestScore"></h3>
+    <h2 id="bestScore"></h2>
 
     <h3>Wrong Answers</h3>
     <div id="wrong-list"></div>
@@ -170,23 +199,46 @@
         
     </div>
 
-    <div id="leaderboardModal" class="hidden">
+    <div id="difficultyModal" class="modal hidden">
 
-        <div class="leaderboard-box">
+    <div class="modal-box">
 
-            <h2>🏆 TOP 10 SCORE</h2>
+        <h2>Select JLPT Level</h2>
 
-            <div id="leaderboardList">
-                Loadding...
-            </div>
+        <button onclick="setLevel('n5')">N5</button>
+        <button onclick="setLevel('n4')">N4</button>
+        <button onclick="setLevel('n3')">N3</button>
+        <button onclick="setLevel('n2')">N2</button>
+        <button onclick="setLevel('n1')">N1</button>
 
-            <button onclick="closeLeaderboard()">
-                Close
-            </button>
+        <button onclick="closeDifficultyModal()">
+            Cancel
+        </button>
+
+    </div>
+
+</div>
+
+<div id="leaderboardModal"
+     class="modal hidden">
+
+    <div class="modal-box">
+
+        <h2>🏆 TOP 10 SCORE</h2>
+
+        <div id="leaderboardList">
+
+            Loading...
 
         </div>
 
+        <button onclick="closeLeaderboardModal()">
+            Close
+        </button>
+
     </div>
+
+</div>
 
     
     <script src="script.js"></script>
