@@ -16,89 +16,169 @@
 
 <body>
 
+
     <div id="menu-screen" class="screen">
 
-        <div class="menu-box">
+        <div class="hero">
 
-
-            <h3 class="cefr">
-                JLPT N5 > N1
-            </h3>
-
-            <h1 class="title">
-                Japanese Level Check
-            </h1>
-
-            <p>
-                Select a section to start
-            </p>
-
-
-        <p class="subtitle">Kanji ・Vorabulary・Grammar</p>
-
-        <p>
-
-            Final Score:
-
-            <span id="last-score">0</span>
-        
-        </p>
-
-        <p>
-           Best Score:
-
-           <span id="high-score">0</span>
-
-        </p>
-
-
-        <div class="menu-grid">
-
-    <div class="menu-card blue" onclick="startKanji()">
-        <div class="icon">📖</div>
-        <h3>Kanji</h3>
-        <p>語彙・単語</p>
+    <div class="hero-level">
+        JLPT N5 → N1
     </div>
 
-    <div class="menu-card purple"
-        onclick="startGrammar()">
+    <h1>Japanese Level<br>Check</h1>
+
+    <p>Select a section to start</p>
+
+    </div>
+
+
+    <div class="menu-grid">
+
+    <div class="menu-card grammar"
+         onclick="openGrammarLevels()">
         <div class="icon">✏️</div>
-        <h3>Grammar</h3>
-        <p>文法</p>
-
+        <h2>Grammar</h2>
+        <span>文法</span>
     </div>
 
-    <div class="menu-card green"
-     onclick="openDifficultyModal()">
+    <div class="menu-card kanji"
+         onclick="openKanjiLevels()">
+        <div class="icon">漢</div>
+        <h2>Kanji</h2>
+        <span>漢字</span>
+    </div>
 
-    <div class="icon">📄</div>
+    <div class="menu-card reading"
+         onclick="openReadingLevels()">
+        <div class="icon">📚</div>
+        <h2>Reading</h2>
+        <span>読解</span>
+    </div>
 
-    <h3>JLPT Level</h3>
-
-    <p id="selected-level">N5</p>
-
-</div>
-
-    <div class="menu-card cyan"
+    <div class="menu-card leaderboard"
          onclick="showLeaderboard()">
         <div class="icon">🏆</div>
-        <h3>Leaderboard</h3>
-        <p>Top Players</p>
+        <h2>Leaderboard</h2>
+        <span>Top Players</span>
     </div>
 
-    <div class="menu-card orange"
-         onclick="startTimeAttack()">
+    <div class="menu-card timeattack"
+         oncilck="startTimeAttack()">
         <div class="icon">😊</div>
-        <h3>Time Attack</h3>
-        <p>N5 → N1</p>
+        <h2>Time Attack</h2>
+        <span>N5 → N1</span>
     </div>
 
 </div>
 
+  <div class="menu-card settings"
+     onclick="openSettings()">
+    <div class="icon">⚙️</div>
+    <h2>Settings</h2>
+    <span>Theme & Furigana</span>
 
-        </div>
+   </div>
 
     </div>
+
+    </div>
+    
+    <div id="kanji-level-screen" class="screen hidden">
+
+    <div class="menu-box">
+
+        <h2>Kanji Level</h2>
+
+        <button onclick="selectKanjiLevel('n5')">N5</button>
+        <button onclick="selectKanjiLevel('n4')">N4</button>
+        <button onclick="selectKanjiLevel('n3')">N3</button>
+        <button onclick="selectKanjiLevel('n2')">N2</button>
+        <button onclick="selectKanjiLevel('n1')">N1</button>
+
+        <button onclick="backToMenu()">⬅ Back</button>
+
+    </div>
+    </div>
+
+
+    <div id="grammar-level-screen" class="screen hidden">
+
+    <div class="menu-box">
+
+        <h2>Grammar Level</h2>
+
+        <button onclick="selectGrammarLevel('n5')">N5</button>
+        <button onclick="selectGrammarLevel('n4')">N4</button>
+        <button onclick="selectGrammarLevel('n3')">N3</button>
+        <button onclick="selectGrammarLevel('n2')">N2</button>
+        <button onclick="selectGrammarLevel('n1')">N1</button>
+
+        <button onclick="backToMenu()">← Back</button>
+
+    </div>
+    </div>
+
+
+    <div id="reading-level-screen" class="screen hidden">
+
+    <div class="menu-box">
+
+        <h2>Reading Level</h2>
+
+        <button onclick="selectReadingLevel('n5')">N5</button>
+        <button onclick="selectReadingLevel('n4')">N4</button>
+        <button onclick="selectReadingLevel('n3')">N3</button>
+        <button onclick="selectReadingLevel('n2')">N2</button>
+        <button onclick="selectReadingLevel('n1')">N1</button>
+
+        <button onclick="backToMenu()">← Back</button>
+
+    </div>
+    </div>
+
+
+    <div id="kanji-type-screen" class="screen hidden">
+
+    <div class="menu-box">
+
+        <h2>Select Type</h2>
+
+        <button onclick="selectKanjiType('reading')">
+            📖 Reading
+        </button>
+
+        <button onclick="selectKanjiType('writing')">
+            ✍️ Writing
+        </button>
+
+        <button onclick="selectKanjiType('context')">
+            💬 Context
+        </button>
+
+        <button onclick="backToLevel()">
+            ⬅ Back
+        </button>
+
+    </div>
+
+    </div>
+
+    <div id="reading-type-screen" class="screen hidden">
+
+    <div class="menu-box">
+
+        <h2>Select Reading Type</h2>
+
+        <div id="reading-type-buttons">
+        </div>
+
+        <button onclick="openReadingLevels()">
+            ← Back
+        </button>
+
+    </div>
+
+</div>
 
     <div id="game-screen" class="screen hidden">
 
@@ -122,7 +202,7 @@
             <h3 id="message"></h3>
 
 
-            <h1 id="question">?</h1>
+            <div id="question">?</div>
 
             <div class="buttons">
 
@@ -155,6 +235,7 @@
             <h2 id="score">Score: 0</h2>
 
         </div>
+
 
     </div>
 
@@ -205,11 +286,11 @@
 
         <h2>Select JLPT Level</h2>
 
-        <button onclick="setLevel('n5')">N5</button>
-        <button onclick="setLevel('n4')">N4</button>
-        <button onclick="setLevel('n3')">N3</button>
-        <button onclick="setLevel('n2')">N2</button>
-        <button onclick="setLevel('n1')">N1</button>
+        <button onclick="selectDifficulty('n5')">N5</button>
+        <button onclick="selectDifficulty('n4')">N4</button>
+        <button onclick="selectDifficulty('n3')">N3</button>
+        <button onclick="selectDifficulty('n2')">N2</button>
+        <button onclick="selectDifficulty('n1')">N1</button>
 
         <button onclick="closeDifficultyModal()">
             Cancel
@@ -240,6 +321,100 @@
 
 </div>
 
+
+<div id="settings-screen"
+     class="screen hidden">
+
+    <div class="game-box">
+
+        <h1>⚙️ Settings</h1>
+
+        <h3>🎨 Theme</h3>
+
+        <select id="themeSelect">
+            <option value="blue">🩵 Blue Night</option>
+            <option value="sakura">🌸 Sakura</option>
+            <option value="sunset">🌅 Sunset</option>
+            <option value="forest">🌲 Forest</option>
+            <option value="dark">🌙 Dark</option>
+        </select>
+
+        <br><br>
+
+        <h3>🔤 Furigana</h3>
+
+        <button
+    id="furigana-on"
+    onclick="setFurigana('on')">
+    ON
+</button>
+
+<button
+    id="furigana-off"
+    onclick="setFurigana('off')">
+    OFF
+</button>
+
+        <br><br>
+
+        <button onclick="backToMenu()">
+            ← Back
+        </button>
+
+    </div>
+
+</div>
+
+
+
+</div>
+
+</div>
+    
+    
+    <script src="data/grammar/kanji-reading/n5.js"></script>
+    <script src="data/grammar/kanji-reading/n4.js"></script>
+    <script src="data/grammar/kanji-reading/n3.js"></script>
+    <script src="data/grammar/kanji-reading/n2.js"></script>
+    <script src="data/grammar/kanji-reading/n1.js"></script>
+
+    <script src="data/grammar/n5.js"></script>
+    <script src="data/grammar/n4.js"></script>
+    <script src="data/grammar/n3.js"></script>
+    <script src="data/grammar/n2.js"></script>
+    <script src="data/grammar/n1.js"></script>
+
+    <script src="data/kanji-writing/n5.js"></script>
+    <script src="data/kanji-writing/n4.js"></script>
+    <script src="data/kanji-writing/n3.js"></script>
+    <script src="data/kanji-writing/n2.js"></script>
+    <script src="data/kanji-writing/n1.js"></script>
+
+    <script src="data/kanji-vocabublary/n5.js"></script>
+    <script src="data/kanji-vocabublary/n4.js"></script>
+    <script src="data/kanji-vocabublary/n3.js"></script>
+    <script src="data/kanji-vocabublary/n2.js"></script>
+    <script src="data/kanji-vocabublary/n1.js"></script>
+
+    <script src="data/kanji-context/n5.js"></script>
+    <script src="data/kanji-context/n4.js"></script>
+    <script src="data/kanji-context/n3.js"></script>
+    <script src="data/kanji-context/n2.js"></script>
+    <script src="data/kanji-context/n1.js"></script>
+
+    <script src="data/reading/n5.js"></script>
+    <script src="data/reading/n4_短文.js"></script>
+    <script src="data/reading/n4_中文.js"></script>
+    <script src="data/reading/n3_短文.js"></script>
+    <script src="data/reading/n3_中文.js"></script>
+    <script src="data/reading/n3_長文.js"></script>
+    <script src="data/reading/n2_短文.js"></script>
+    <script src="data/reading/n2_中文.js"></script>
+    <script src="data/reading/n2_長文.js"></script>
+    <script src="data/reading/n1_短文.js"></script>
+    <script src="data/reading/n1_中文.js"></script>
+    <script src="data/reading/n1_長文.js"></script>
+    
     
     <script src="script.js"></script>
 
