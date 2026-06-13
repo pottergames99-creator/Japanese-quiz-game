@@ -1517,6 +1517,10 @@ function selectReadingType(type){
     startReading();
 }
 
-
+function loadData(path){
+    const s = document.createElement("script");
+    s.src = path;
+    document.body.appendChild(s);
+}
 
 
