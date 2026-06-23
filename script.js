@@ -68,14 +68,25 @@ shuffledWords = [];
 
     if(gameMode === "time"){
 
-        words = [
-            ...n5Kanji,
-            ...n4Kanji,
-            ...n3Kanji,
-            ...n2Kanji,
-            ...n1Kanji
-        ];
-    }
+    words = [
+
+        ...n5KanjiReading,
+        ...n4KanjiReading,
+        ...n3KanjiReading,
+        ...n2KanjiReading,
+        ...n1KanjiReading,
+
+        ...n5KanjiWriting,
+        ...n4KanjiWriting,
+        ...n3KanjiWriting,
+        ...n2KanjiWriting,
+        ...n1KanjiWriting
+
+    ];
+
+    words = [...words].sort(() => Math.random() - 0.5);
+
+}
 
     else{
 
@@ -280,13 +291,19 @@ else if(
     gameoverScreen.classList.add("hidden");
     gameScreen.classList.remove("hidden");
 
+    const progress = document.getElementById("progress");
+
+if(progress){
+
     if(gameMode === "time"){
-        document.getElementById("progress").style.display = "none";
+        progress.style.display = "none";
     }else{
-        document.getElementById("progress").style.display = "block";
-        document.getElementById("progress").innerHTML =
-        "Question 1 /" + maxQuestion;
+        progress.style.display = "block";
+        progress.innerHTML =
+            "Question 1 / " + maxQuestion;
     }
+
+}
 
     document.getElementById("score").innerHTML =
     "Score: 0";
@@ -511,13 +528,21 @@ function checkAnswer(choice){
 
     if(gameMode === "time"){
 
-        words = [
-            ...n5Words,
-            ...n4Words,
-            ...n3Words,
-            ...n2Words,
-            ...n1Words
-        ];
+         words = [
+
+        ...n5KanjiReading,
+        ...n4KanjiReading,
+        ...n3KanjiReading,
+        ...n2KanjiReading,
+        ...n1KanjiReading,
+
+        ...n5KanjiWriting,
+        ...n4KanjiWriting,
+        ...n3KanjiWriting,
+        ...n2KanjiWriting,
+        ...n1KanjiWriting
+
+    ];
     }
 
     else{
@@ -970,24 +995,23 @@ function startReading(){
 
 function startTimeAttack(){
 
+    let playerName =
+    localStorage.getItem("playerName");
+
+    if(!playerName){
+
+        alert(
+            "Please set your player name first"
+        );
+
+        openSettings();
+
+        return;
+    }
+
     gameMode = "time";
 
-    timeLeft = 60;
-
-    words = [
-        ...n5Words,
-        ...n4Words,
-        ...n3Words,
-        ...n2Words,
-        ...n1Words
-    ];
-
-    shuffledWords =
-    [...words].sort(() => Math.random() - 0.5);
-
     startGame();
-
-    document.getElementById("timer").style.display = "block";
 
 }
 
@@ -1091,7 +1115,7 @@ function closeLeaderboardModal(){
 
 let showFurigana = true;
 
-function toggleFurigana(){
+function toggleFurigana() {
 
     showFurigana = !showFurigana;
 
@@ -1099,13 +1123,23 @@ function toggleFurigana(){
         "hide-furigana"
     );
 
-    document.getElementById(
-        "furigana-btn"
-    ).textContent =
+    const btn =
+        document.getElementById(
+            "furigana-btn"
+        );
 
-    showFurigana
-    ? "Furigana ON"
-    : "Furigana OFF";
+    if(btn){
+        btn.textContent =
+            showFurigana
+            ? "ON"
+            : "OFF";
+    }
+
+    showToast(
+        showFurigana
+        ? "📖 Furigana ON"
+        : "🙈 Furigana OFF"
+    );
 }
 
 function openDifficultyModal(category){
@@ -1239,6 +1273,14 @@ function openSettings(){
     document
     .getElementById("settings-screen")
     .classList.remove("hidden");
+
+    document.getElementById(
+        "playerNameInput"
+    ).value =
+    localStorage.getItem(
+        "playerName"
+    ) || "";
+
 }
 
 
@@ -1361,20 +1403,35 @@ function shuffle(array) {
 const themeSelect =
 document.getElementById("themeSelect");
 
-const savedTheme =
-localStorage.getItem("theme");
+if(themeSelect){
 
-if(savedTheme){
+    const savedTheme =
+        localStorage.getItem("theme");
 
-    themeSelect.value = savedTheme;
+    if(savedTheme){
+        themeSelect.value = savedTheme;
+        applyTheme(savedTheme);
+    }
 
-    applyTheme(savedTheme);
+    themeSelect.addEventListener(
+        "change",
+        () => {
+
+            const theme =
+                themeSelect.value;
+
+            localStorage.setItem(
+                "theme",
+                theme
+            );
+
+            applyTheme(theme);
+        }
+    );
 }
 
-themeSelect.addEventListener("change", () => {
 
-    const theme =
-    themeSelect.value;
+function setTheme(theme){
 
     localStorage.setItem(
         "theme",
@@ -1382,7 +1439,11 @@ themeSelect.addEventListener("change", () => {
     );
 
     applyTheme(theme);
-});
+
+    showToast(
+        "🎨 Theme: " + theme
+    );
+}
 
 function applyTheme(theme){
 
@@ -1523,4 +1584,37 @@ function loadData(path){
     document.body.appendChild(s);
 }
 
+function savePlayerName(){
 
+    const name =
+    document.getElementById(
+        "playerNameInput"
+    ).value.trim();
+
+    if(name === ""){
+        showToast("Please enter a name");
+        return;
+    }
+
+    localStorage.setItem(
+        "playerName",
+        name
+    );
+
+    showToast("Name Saved");
+
+}
+
+function showToast(message){
+
+    const toast =
+        document.getElementById("toast");
+
+    toast.textContent = message;
+
+    toast.classList.add("show");
+
+    setTimeout(() => {
+        toast.classList.remove("show");
+    }, 2500);
+}

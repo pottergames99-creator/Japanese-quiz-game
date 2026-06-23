@@ -893,3 +893,87 @@ rt{
         padding:20px;
     }
 }
+
+#playerNameInput{
+    width:300px;
+    max-width:80%;
+    padding:12px;
+    font-size:18px;
+
+    border:none;
+    border-radius:12px;
+
+    margin-bottom:15px;
+}
+
+.toast{
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(0.8);
+
+    background: linear-gradient(
+        135deg,
+        #15ff00,
+        #00c635
+    );
+
+    color: white;
+
+    padding: 20px 40px;
+
+    border-radius: 16px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    box-shadow:
+        0 0 30px rgba(37,99,235,.6);
+
+    opacity: 0;
+
+    transition: all .3s ease;
+
+    z-index: 9999;
+}
+
+.toast.show{
+    opacity: 1;
+
+    transform:
+        translate(-50%, -50%)
+        scale(1);
+}
+
+.toast.show{
+    opacity: 1;
+
+    transform:
+        translate(-50%,-50%)
+        scale(1);
+
+    animation:
+        pulse .4s ease;
+}
+
+@keyframes pulse{
+    0%{
+        transform:
+        translate(-50%,-50%)
+        scale(.8);
+    }
+
+    50%{
+        transform:
+        translate(-50%,-50%)
+        scale(1.05);
+    }
+
+    100%{
+        transform:
+        translate(-50%,-50%)
+        scale(1);
+    }
+}
