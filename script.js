@@ -11,7 +11,7 @@ let difficulty = "n5";
 let category = "kanji";
 let selectedKanjiLevel = "";
 let selectedKanjiType = "";
-let selectedGrammarLevel = "n5";
+let selectedGrammarLevel = "";
 let selectedReadingLevel = "";
 let selectedReadingType = "";
 
@@ -1184,6 +1184,8 @@ function openKanjiLevels(){
 function selectKanjiLevel(level){
     selectedKanjiLevel = level;
 
+    selectedLevel = level;
+
     document
     .getElementById("kanji-level-screen")
     .classList.add("hidden");
@@ -1345,7 +1347,7 @@ function openGrammarLevels(){
 function selectGrammarLevel(level){
 
     selectedGrammarLevel = level;
-    difficulty = level;
+    selectedLevel = level;
 
     document
     .getElementById("grammar-level-screen")
@@ -1400,91 +1402,7 @@ function shuffle(array) {
     return array;
 }
 
-const themeSelect =
-document.getElementById("themeSelect");
 
-if(themeSelect){
-
-    const savedTheme =
-        localStorage.getItem("theme");
-
-    if(savedTheme){
-        themeSelect.value = savedTheme;
-        applyTheme(savedTheme);
-    }
-
-    themeSelect.addEventListener(
-        "change",
-        () => {
-
-            const theme =
-                themeSelect.value;
-
-            localStorage.setItem(
-                "theme",
-                theme
-            );
-
-            applyTheme(theme);
-        }
-    );
-}
-
-
-function setTheme(theme){
-
-    localStorage.setItem(
-        "theme",
-        theme
-    );
-
-    applyTheme(theme);
-
-    showToast(
-        "🎨 Theme: " + theme
-    );
-}
-
-function applyTheme(theme){
-
-    switch(theme){
-
-        case "blue":
-
-            document.body.style.background =
-            "radial-gradient(circle at top,#0d2450,#05122d 70%)";
-
-            break;
-
-        case "sakura":
-
-            document.body.style.background =
-            "linear-gradient(135deg,#ff9a9e,#fad0c4)";
-
-            break;
-
-        case "sunset":
-
-            document.body.style.background =
-            "linear-gradient(135deg,#ff7e5f,#feb47b)";
-
-            break;
-
-        case "forest":
-
-            document.body.style.background =
-            "linear-gradient(135deg,#134e5e,#71b280)";
-
-            break;
-
-        case "dark":
-
-            document.body.style.background =
-            "linear-gradient(135deg,#232526,#414345)";
-
-            break;
-    }
-}
 
 window.addEventListener(
     "load",
@@ -1497,6 +1415,8 @@ window.addEventListener(
 function selectReadingLevel(level){
 
     selectedReadingLevel = level;
+
+    selectedLevel = level;
 
     document
         .getElementById("reading-level-screen")
